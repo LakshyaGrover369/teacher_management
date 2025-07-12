@@ -59,7 +59,7 @@ export default function TeacherForm({
               id="name"
               value={formData.name || ""}
               onChange={handleChange}
-              className={`block w-full rounded-md shadow-sm ${
+              className={`block w-full rounded-md shadow-sm p-2 ${
                 errors.name
                   ? "border-red-300 focus:ring-red-500 focus:border-red-500"
                   : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
@@ -85,7 +85,7 @@ export default function TeacherForm({
               id="email"
               value={formData.email || ""}
               onChange={handleChange}
-              className={`block w-full rounded-md shadow-sm ${
+              className={`block w-full rounded-md shadow-sm p-2 ${
                 errors.email
                   ? "border-red-300 focus:ring-red-500 focus:border-red-500"
                   : "border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
@@ -111,7 +111,7 @@ export default function TeacherForm({
               id="phone"
               value={formData.phone || ""}
               onChange={handleChange}
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="block w-full rounded-md border-gray-300 p-2 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             />
           </div>
         </div>

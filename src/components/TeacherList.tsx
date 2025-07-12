@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import FilterDropdown from "./FilterDropdown";
 import Pagination from "./Pagination";
 import EmptyState from "./EmptyState";
+import Link from "next/link";
 
 interface TeacherListProps {
   teachers: Teacher[];
@@ -40,6 +41,11 @@ export default function TeacherList({
             onSelect={onFilterChange}
             label="Filter"
           />
+          <Link href="/teachers/new">
+            <button className="ml-4 px-4 py-2 w-[200px] bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 transition">
+              Add Teacher
+            </button>
+          </Link>
         </div>
       </div>
 
