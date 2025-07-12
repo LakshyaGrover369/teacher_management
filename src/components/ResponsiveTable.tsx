@@ -1,25 +1,25 @@
 import { ReactNode } from "react";
 
-interface TableColumn {
+interface TableColumn<T> {
   key: string;
   header: string;
-  render: (row: any) => ReactNode;
+  render: (row: T) => ReactNode;
   className?: string;
 }
 
-interface ResponsiveTableProps {
-  columns: TableColumn[];
-  data: any[];
+interface ResponsiveTableProps<T> {
+  columns: TableColumn<T>[];
+  data: T[];
   emptyMessage?: string;
   className?: string;
 }
 
-export default function ResponsiveTable({
+export default function ResponsiveTable<T>({
   columns,
   data,
   emptyMessage = "No data available",
   className = "",
-}: ResponsiveTableProps) {
+}: ResponsiveTableProps<T>) {
   return (
     <div className={`overflow-x-auto ${className}`}>
       <div className="inline-block min-w-full align-middle">
