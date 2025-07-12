@@ -5,7 +5,7 @@ import TeacherForm from "../../components/TeacherForm";
 import { useTeachers } from "../../hooks/useTeachers";
 import ToastNotification from "../../components/ToastNotification";
 import Breadcrumbs from "../../components/Breadcrumbs";
-import type { Teacher } from "../../types/teacher"; // Add this line
+import type { Teacher } from "../../types/teacher";
 
 const NewTeacherPage = () => {
   const router = useRouter();
