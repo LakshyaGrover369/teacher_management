@@ -25,11 +25,11 @@ export default function FilterDropdown({
     options.find((opt) => opt.value === selectedValue) || options[0];
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left w-full">
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex justify-between items-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition"
           onClick={() => setIsOpen(!isOpen)}
         >
           {label}: {selectedOption.label}
@@ -38,7 +38,7 @@ export default function FilterDropdown({
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10 transition">
           <div className="py-1">
             {options.map((option) => (
               <button
@@ -47,10 +47,10 @@ export default function FilterDropdown({
                   onSelect(option.value);
                   setIsOpen(false);
                 }}
-                className={`block w-full text-left px-4 py-2 text-sm ${
+                className={`block w-full text-left px-4 py-2 text-sm transition ${
                   selectedValue === option.value
                     ? "bg-indigo-100 text-indigo-900"
-                    : "text-gray-700 hover:bg-gray-100"
+                    : "text-gray-700 hover:bg-indigo-50"
                 }`}
               >
                 {option.label}
