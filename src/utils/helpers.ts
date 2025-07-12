@@ -11,7 +11,7 @@ export const capitalize = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
-export const debounce = <F extends (...args: any[]) => any>(
+export const debounce = <F extends (...args: unknown[]) => unknown>(
   func: F,
   wait: number
 ): ((...args: Parameters<F>) => void) => {

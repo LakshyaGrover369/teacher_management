@@ -6,7 +6,7 @@ import LoadingSkeleton from "../../components/LoadingSkeleton";
 import ToastNotification from "../../components/ToastNotification";
 
 const TeachersPage = () => {
-  const { teachers, loading, error, removeTeacher } = useTeachers();
+  const { teachers, loading, removeTeacher } = useTeachers();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterValue, setFilterValue] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);

@@ -18,7 +18,7 @@ export default function PrivacyBanner() {
         </div>
         <div className="ml-3">
           <p className="text-sm text-blue-700">
-            Thanks for using Office! We've made some updates to the privacy
+            Thanks for using Office! We&#39;ve made some updates to the privacy
             settings to give you more control.
             <a
               href="#"
